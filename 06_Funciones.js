@@ -90,3 +90,34 @@ fordFocus.aparacar();
 console.log(fordFocus.getRuedas());
 console.log(fordFocus.arrancar());
 
+class Ordenador {
+  constructor(id, marca, procesador, ram, ssd) {
+    this.id = id;
+    this.marca = marca;
+    this.procesador = procesador;
+    this.ram = ram;
+    this.ssd = ssd;
+  }
+  iniciar() {
+    console.log("El Ordenador se está iniciando...")
+  }
+  mostrarCaracteristicas() {
+    let caracteristicas = `
+    Procesador: ${this.procesador}
+    RAM: ${this.ram}
+    iSD: ${this.ssd}
+    `;
+    return caracteristicas;
+
+  }
+}
+let pcGamer = new Ordenador(1001, "MS1", "Intel Core 7", 32, 700);
+console.log(pcGamer);
+
+console.log();
+
+pcGamer.iniciar();
+
+console.log();
+
+console.log(pcGamer.mostrarCaracteristicas());
