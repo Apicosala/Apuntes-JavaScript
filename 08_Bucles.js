@@ -81,11 +81,15 @@ for (let i = 0, longitud = unArray.length; i < longitud; i++) {
 }
 console.timeEnd("test1")
 
-// Bucle forEach
-// en este ejemplo diríamos: "papami Array ejecuta esta condicion que es a función"
+// Bucle forEach (para utilizar foreach tiene que ser una Array)
+// en este ejemplo diríamos: "para mi Array ejecuta esta condicion que es a función"
 const miArray = [1, 2, 3, 4,];
 miArray.forEach(function (elemento, index) {
     console.log("El valor de la posición " + index + " es " + elemento);
+});
+const miArray1 = [1, 2, 3, 4, 5, 6, 7];
+miArray1.forEach((elemento, indice) => {
+    console.log(`El valor de la posición ${indice} es: ${elemento}`);
 });
 
 const libro = {
@@ -95,7 +99,7 @@ const libro = {
     editorial: "carlosazaustre.es",
     precio: "17.96€",
 };
-//neceistamos que propiedades el obketo sean un array para utilizar forEach.
+//neceistamos que propiedades el objeto sean un array para utilizar forEach.
 /*Utilizaremos las funciones de la clase Object : getOwnPropertyNames devuelve una array con las propiedades del objeto
  y getOwnPropertyDescriptor para accceder a su valor*/
 const propiedades = Object.getOwnPropertyNames(libro);
@@ -103,6 +107,12 @@ propiedades.forEach(function (name) {
     let valor = Object.getOwnPropertyDescriptor(libro, name).value;
     console.log("La propiedad " + name + " contiene: " + valor)
 });
+//otra forma más legible
+const prop = Object.getOwnPropertyNames(libro);
+prop.forEach(nombre => {
+    let valor = Object.getOwnPropertyDescriptor(libro, nombre).value
+    console.log(`La prop ${nombre} contiene: ${valor}.`)
+})
 // For ... In: for ( "nombre de la propiedad"(Key) in "valor de la propiedad"(object[key]))
 const libro1 = {
     título: "Aprendiendo JS",
@@ -111,6 +121,16 @@ const libro1 = {
     editorial: "carlosazaustre.es",
     precio: "17.96€",
 };
-for (let prop in libro) {
-    console.log("La propiedad " + prop + " es: " + libro[prop]);
+for (let propt in libro1) {
+    console.log(`La propiedad ${propt} es: ${libro1[propt]}`);
+};
+
+const coches = {
+    marcas: ["Seat", "Ford", "Kia", "Peugeot"],
+    color: ["Azul", "Blanco", "Rojo"],
+    unidades: 32,
+    nombre: "Autos Pepe"
+};
+for (let prop in coches) {
+    console.log(`La propiedad ${prop} tiene: ${coches[prop]}`)
 };

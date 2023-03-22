@@ -26,7 +26,7 @@ libroReact["formatos"];
 //tambien podemos modificarlos de la misma manera:
 libroReact.precio = 20.00;
 libroReact["publicado"] = true;
-// con array podemos accder a las propiedades con variables pero con la notación de punto no
+// con array podemos acceder a las propiedades con variables pero con la notación de punto no
 let propiedad = "autor";
 libroReact[propiedad];
 libroReact.propiedad; // sale undefined
@@ -154,20 +154,24 @@ let lista3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 let resultadoDivisible3 = lista3.filter(function (elemento) {
     return (elemento % 3 === 0);
 });
+let resultado = lista3.filter(elemento => elemento % 3 === 0)
 console.log(resultadoDivisible3);
 
 /* para trocear u obtener una parte de la Array utilizamos .slice(),
-si ponemos lista.slice() nos quitará la posición 0 y 1.
-si ponemos lista.slice (2, 4) el primer parametro es inclusivo per el ultimo parametro NO
+si ponemos lista.slice(2) nos devolverá otra lista sin la posición 0 y 1. Ya que la array es inmutable.
+si ponemos lista.slice (2, 4) el primer parametro es inclusivo per el ultimo parametro NO.
+Nos dará otra lista con los elemtos entre 2 hasta 4 sin incluir
 por tanto, nos quitaria las posiciones 0, 1 y la 4 para arriba 
 admite parametros en negativo -2 */
 lista3.slice(2);
 console.log(lista3);
 lista3.slice(2, 4);
+lista3.slice(2, -2); // desde el 2 hasta el penúltimo.
 console.log(lista3);
 
 //   ## Stings: métodos y comportamientos ##
 "Javacript"[2]; //devuelve la segunda posición del indice "v".
+"Javascript".charCodeAt(2); //devuelve 118 unicode.
 "Javascript".length; // nos devuelve el nuemro de carateres que tenga "10".
 "Javascript".indexOf("script"); // nos devuelve el indice en el que empieza "script", 4.
 "Javascript".substring(4, 10); // devuelve la parte contenida entre el indice 4 y 10, scrip.
@@ -176,7 +180,18 @@ const texto = "Hola mundo";
 const texto1 = new String("Hola mundo");
 // una String puede ser pasada a Array con .split() pasando como parametro el delimitador que queramos que separe los elementos.
 const fecha = new Date();
-fecha.toString();
+fecha.toString().split(" ");
 //fecha = fecha.split("")
-console.log(fecha);
-
+console.log(fecha.toString());
+// Wed Mar 22 2023 10:01:15 GMT+0100 (hora estándar de Europa central)
+console.log(fecha.toString().split(" "));
+/*
+ 'Wed',      'Mar',
+  '22',       '2023',
+  '10:01:15', 'GMT+0100',
+  '(hora',    'estándar',
+  'de',       'Europa',
+  'central)'
+  split me lo pasa a objeto
+*/
+console.log(fecha.toString().split(" ")[4]);
