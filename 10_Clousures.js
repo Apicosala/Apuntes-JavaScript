@@ -44,7 +44,7 @@ miContador.incrementar();// devuelve 0 solo le damos la orden de incrementar
 console.log(miContador.valor());// 1
 miContador.incrementar();
 console.log(miContador.valor());// 2
-
+/* he intentado hacer una Class con el mismo ejemplo pero de momento no se como realizar
 class MiContador {
     constructor(valor, incrementar, decrementar) {
         this.valor = valor;
@@ -63,3 +63,4 @@ class MiContador {
 }
 const contador1 = new MiContador
 console.log(contador1.value());
+*/

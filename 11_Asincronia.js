@@ -44,6 +44,8 @@ getdatos2()
     .then((datos) => console.log(datos));
 //  .catch(error => ....) si queremos poner un error
 // tambien en lugar de .then o .catch podemos utilzar otra manera de llamar, utilizando await (esperar)
+
+
 async function ejemploAwait() {
     try {
         const datos1 = await getdatos2(); // datos1 = espera que getdatos2 me de valores ( en este caso 1,5")

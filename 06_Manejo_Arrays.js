@@ -45,9 +45,9 @@ console.log(posts.filter(posts => posts.image !== undefined));
 //Método Reduce
 console.log(posts.reduce((allTags, posts) => {
     return [...allTags, ...posts.tags]
-}, []))
+}, []));
 /*de esta forma hace una array con todos los elementos de Tags pero repertidos,
 si no queremos que se repita utilizaremos SET*/
 console.log(posts.reduce((allTags, posts) => {
     return Array.from(new Set([...allTags, ...posts.tags])) // devuelveme un nuevo Array pero sin repetidos
-}, []))
+}, []));

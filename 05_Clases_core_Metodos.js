@@ -192,6 +192,7 @@ console.log(fecha.toString().split(" "));
   '(hora',    'estándar',
   'de',       'Europa',
   'central)'
-  split me lo pasa a objeto
+  split me lo pasa asi
 */
 console.log(fecha.toString().split(" ")[4]);
+//10:05:17
