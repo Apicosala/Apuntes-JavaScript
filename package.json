@@ -1,0 +1,20 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "<div id=\"header\" align=\"center\">  <img src=\"https://media.giphy.com/media/SvFocn0wNMx0iv2rYz/giphy.gif\" width=\"600\" height=\"200\" />  <h1 align=\"center\">Apuntes-JavaScript </div>",
+  "main": "00_Introduccion.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clases": "node ./objetos/clases.js",
+    "estudiantes": "node ./objetos/estudiantes.js",
+    "teacher": "node ./objetos/teacher.js",
+    "todo": "node ./objetos/todo.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "uuid4": "^2.0.3"
+  }
+}

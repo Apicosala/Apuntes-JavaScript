@@ -75,4 +75,24 @@ switch (operacion2) {
         console.log("es 0")
 }
 
+let cocheNuevo = {
+    marca: "Volvo",
+    modelo: "XC90",
+    color: "gris",
+};
+switch (cocheNuevo.marca) {
+    case "Volvo":
+        console.log("El coche es un Volvo");
+        break;
+    case "Audi":
+        console.log("El coche es un Audi");
+        break;
+    case "BMW":
+        console.log("El coche es un BMW");
+        break;
+    default:
+        console.log("No es un coche conocido");
+};
+
+
 
